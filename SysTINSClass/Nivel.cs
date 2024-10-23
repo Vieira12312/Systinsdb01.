@@ -9,20 +9,20 @@ namespace SysTINSClass
     public class Nivel
     {
         public int Id {  get; set; }
-        public string? Name { get; set; }    
+        public string? Nome { get; set; }    
         public string? Sigla { get; set; } 
 
         public Nivel() { }// isso é um método construtor quando usamos a expressão new em qualquer lugar estamos chamando o metodo construtor
 
         public Nivel(string? name, string? sigla)
         {
-            Name = name;
+            Nome = name;
             Sigla = sigla;
         }
         public Nivel(int id, string? name, string? sigla)
         {
             Id = id;
-            Name = name;
+            Nome = name;
             Sigla = sigla;
         }
         public void Inserir() { 
@@ -58,24 +58,24 @@ namespace SysTINSClass
             var dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                lista.Add(new Nivel (dr.GetInt32(0), dr.GetString(1), dr.GetString(2)))
+                lista.Add(new Nivel(dr.GetInt32(0), dr.GetString(1), dr.GetString(2)));
             }
             cmd.Connection.Close();
-            return lista}
+            return lista; }
         public bool Atualizar()
         {
             
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = $"update niveis set nome = '{Nome}', silga = '{Sigla}' where id = {Id}"
-            return = cmd.ExecuteNonQuery()>0?true:false;
+            cmd.CommandText = $"update niveis set nome = '{Nome}', silga = '{Sigla}' where id = {Id}";
+            return cmd.ExecuteNonQuery()>0?true:false;
 
 
             
         }
         public void Excluir(int id)
         {
-            var cmd = Banco.Abrir(0);
+            var cmd = Banco.Abrir();
             cmd.CommandText = $"delet from niveis where id ={id}";
             cmd.ExecuteNonQuery();
         }
