@@ -1,4 +1,4 @@
--- MySQL Workbench Forward Engineering
+niveis-- MySQL Workbench Forward Engineering
 
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
@@ -394,7 +394,7 @@ DELIMITER ;
 -- -----------------------------------------------------
 
 DELIMITER $$
-USE `systinsdb01`
+
 CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_cliente_insert`(
 spnome varchar(100), 
 spcpf char(11), 
@@ -402,7 +402,7 @@ sptelefone char(14),
 spemail varchar(60), 
 spdatanasc date
 )
-beginprodutos
+begin
 	insert into clientes 
     values (0,spnome, spcpf, sptelefone, spemail, spdatanasc,default,1);
     select  last_insert_id();

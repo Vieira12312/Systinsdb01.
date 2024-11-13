@@ -20,7 +20,15 @@ namespace SysTINSClass
 
         public Usuario()
         { 
+<<<<<<< HEAD
+<<<<<<< HEAD
+            Nivel = new();
+=======
             Nivel   Nivel = new();
+>>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+=======
+            Nivel   Nivel = new();
+>>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
         }
         public Usuario(string nome, string email, string senha, Nivel nivel)
         {
@@ -52,8 +60,18 @@ namespace SysTINSClass
             var cmd = Banco.Abrir();
             //cmd.CommandText = $"insert into usuarios values (0, '{Nome}', '{Email}', md5('{Senha}'), '{Nivel.Id}', default);";
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            cmd.CommandText = "sp_usuario_insert";
+            cmd.Parameters.AddWithValue("spnome", MySql.Data.MySqlClient.MySqlDbType.VarChar);
+=======
             cmd.CommandText = "sp_usuario_altera";
             cmd.Parameters.Add("spnome", MySql.Data.MySqlClient.MySqlDbType.VarChar);
+>>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+=======
+            cmd.CommandText = "sp_usuario_altera";
+            cmd.Parameters.Add("spnome", MySql.Data.MySqlClient.MySqlDbType.VarChar);
+>>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
             cmd.Parameters.AddWithValue("spemail", Email);
             cmd.Parameters.AddWithValue("spsenha", Senha);
             cmd.Parameters.AddWithValue("spnivel", Nivel.Id);
@@ -84,7 +102,15 @@ namespace SysTINSClass
             }
             return usuario;
         }
+<<<<<<< HEAD
+<<<<<<< HEAD
+        public static List<Usuario> ObterLista()
+=======
         public List<Usuario> ObsterLista()
+>>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+=======
+        public List<Usuario> ObsterLista()
+>>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
         {
             List<Usuario> lista = new();
             var cmd = Banco.Abrir();
@@ -109,7 +135,15 @@ namespace SysTINSClass
         public bool Atualizar()
         {
             var cmd = Banco.Abrir();
+<<<<<<< HEAD
+<<<<<<< HEAD
+            cmd.CommandType = CommandType.StoredProcedure;
+=======
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
+>>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+=======
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+>>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
             cmd.CommandText = "sp_usuario_altera";
             cmd.Parameters.AddWithValue("spid", Id);
             cmd.Parameters.AddWithValue("spnome", Nome);
@@ -133,7 +167,16 @@ namespace SysTINSClass
                     dr.GetString(2),
                     dr.GetString(3),
                     Nivel.ObterPorId(dr.GetInt32(4)),
+<<<<<<< HEAD
+<<<<<<< HEAD
+                    dr.GetBoolean(5)
+                    );
+=======
                     dr.GetBoolean(5));
+>>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+=======
+                    dr.GetBoolean(5));
+>>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
 
             }
             return usuario;

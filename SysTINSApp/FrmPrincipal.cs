@@ -17,18 +17,6 @@ namespace SysTINSApp
         {
             InitializeComponent();
         }
-
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-            //var cmd = Banco.Abrir();
-            //cmd.CommandText = "Select * from niveis where id = 1";
-            //var dr = cmd.ExecuteReader();
-            //if (dr.Read())
-            //{
-            //    MessageBox.Show($"olá{dr.GetString(1)}");
-            //}
-        }
-
         private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -41,9 +29,31 @@ namespace SysTINSApp
 
         private void novoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FrmUsuarios frmUsuarios = new();
-            frmUsuarios.MdiParent = this;//isso faz com que deixe ele dentro do conteiner na parte cinza e não abra duas telas a partir do momento em que você clicar no icone ou botão
-            frmUsuarios.Show();//Se coloca show Dialog ele abre duas telinhas quando clicar no botão mas tem um porem ele so fecha se voce terminar o processo
+            FrmUsuarios frmUsuarios = new();// cria uma instância (objeto) do FrmUsuarios 
+            frmUsuarios.MdiParent = this; // associa esta instância ao container (MDI) FrmPrincipal
+            frmUsuarios.Show(); // exibe o form Usuários na janela do sistema 
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            Hide();
+            FrmLogin frmLogin = new();
+            //frmLogin.Show();
+            //if (frmLogin.ShowDialog() == DialogResult.OK)
+            //{
+            //    tsslUsuario.Text = Program.UsuarioLogado.Nome + " - " + Program.UsuarioLogado.Nivel.Nome;
+            Show();
+            //}
+            //else
+            //    Application.Exit();
+
+        }
+
+        private void manterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProdutos frmProdutos= new();// cria uma instância (objeto) do FrmUsuarios 
+            frmProdutos.MdiParent = this; // associa esta instância ao container (MDI) FrmPrincipal
+            frmProdutos.Show(); // exibe o form Usuários na janela do sistema 
         }
     }
 }
