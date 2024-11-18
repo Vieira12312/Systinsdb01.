@@ -17,18 +17,9 @@ namespace SysTINSClass
         public Nivel Nivel;
         public bool Ativo;
 
-
         public Usuario()
         { 
-<<<<<<< HEAD
-<<<<<<< HEAD
             Nivel = new();
-=======
-            Nivel   Nivel = new();
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
-            Nivel   Nivel = new();
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
         }
         public Usuario(string nome, string email, string senha, Nivel nivel)
         {
@@ -102,15 +93,7 @@ namespace SysTINSClass
             }
             return usuario;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
         public static List<Usuario> ObterLista()
-=======
-        public List<Usuario> ObsterLista()
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
-        public List<Usuario> ObsterLista()
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
         {
             List<Usuario> lista = new();
             var cmd = Banco.Abrir();
@@ -129,29 +112,17 @@ namespace SysTINSClass
                     );
             }
             return lista;
-
-
         }
         public bool Atualizar()
         {
             var cmd = Banco.Abrir();
-<<<<<<< HEAD
-<<<<<<< HEAD
             cmd.CommandType = CommandType.StoredProcedure;
-=======
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
             cmd.CommandText = "sp_usuario_altera";
             cmd.Parameters.AddWithValue("spid", Id);
             cmd.Parameters.AddWithValue("spnome", Nome);
             cmd.Parameters.AddWithValue("spsenha", Senha);
             cmd.Parameters.AddWithValue("spnivel", Nivel.Id);
             return cmd.ExecuteNonQuery() > 0 ? true : false;
-
-
     }
         //efetuar login
         public static Usuario Efetuarlogin(string email, string senha)
@@ -167,20 +138,10 @@ namespace SysTINSClass
                     dr.GetString(2),
                     dr.GetString(3),
                     Nivel.ObterPorId(dr.GetInt32(4)),
-<<<<<<< HEAD
-<<<<<<< HEAD
                     dr.GetBoolean(5)
                     );
-=======
-                    dr.GetBoolean(5));
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
-                    dr.GetBoolean(5));
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-
             }
             return usuario;
-            
         }
         
    }
