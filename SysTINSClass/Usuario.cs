@@ -10,15 +10,15 @@ namespace SysTINSClass
 {
     public class Usuario
     {
-        public int Id;
-        public string? Nome;
-        public string? Email;
-        public string? Senha;
-        public Nivel Nivel;
-        public bool Ativo;
+        public int Id { get; set; }
+        public string? Nome { get; set; }
+        public string? Email { get; set; }
+        public string? Senha { get; set; }
+        public Nivel Nivel { get; set; }
+        public bool Ativo { get; set; }
 
         public Usuario()
-        { 
+        {
             Nivel = new();
         }
         public Usuario(string nome, string email, string senha, Nivel nivel)
@@ -45,24 +45,16 @@ namespace SysTINSClass
             Nivel = nivel;
             Ativo = ativo;
         }
-        //Inserir
+        // inserir 
         public void Inserir()
         {
             var cmd = Banco.Abrir();
-            //cmd.CommandText = $"insert into usuarios values (0, '{Nome}', '{Email}', md5('{Senha}'), '{Nivel.Id}', default);";
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+            // cmd.CommandText = $"insert into usuarios values (0, '{Nome}', '{Email}', md5('{Senha}'), {Nivel.Id}, default);";
+
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.CommandText = "sp_usuario_insert";
-            cmd.Parameters.AddWithValue("spnome", MySql.Data.MySqlClient.MySqlDbType.VarChar);
-=======
-            cmd.CommandText = "sp_usuario_altera";
-            cmd.Parameters.Add("spnome", MySql.Data.MySqlClient.MySqlDbType.VarChar);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
-            cmd.CommandText = "sp_usuario_altera";
-            cmd.Parameters.Add("spnome", MySql.Data.MySqlClient.MySqlDbType.VarChar);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+            cmd.Parameters.Add("spnome", MySql.Data.MySqlClient.MySqlDbType.VarChar).Value = Nome;
             cmd.Parameters.AddWithValue("spemail", Email);
             cmd.Parameters.AddWithValue("spsenha", Senha);
             cmd.Parameters.AddWithValue("spnivel", Nivel.Id);
@@ -73,22 +65,22 @@ namespace SysTINSClass
             }
             cmd.Connection.Close();
         }
-        //ObterPorId
+        // ObterPorId
         public static Usuario ObterPorId(int id)
         {
             Usuario usuario = new();
             var cmd = Banco.Abrir();
-            cmd.CommandText = $"select * from usuarios whare id ={id}";
+            cmd.CommandText = $"select * from usuarios where id = {id}";
             var dr = cmd.ExecuteReader();
             if (dr.Read())
             {
                 usuario = new(
-                    dr.GetInt32(0),
-                    dr.GetString(1),
-                    dr.GetString(2),
-                    dr.GetString(3),
-                    Nivel.ObterPorId(dr.GetInt32(4)),
-                    dr.GetBoolean(5)
+                        dr.GetInt32(0),
+                        dr.GetString(1),
+                        dr.GetString(2),
+                        dr.GetString(3),
+                        Nivel.ObterPorId(dr.GetInt32(4)),
+                        dr.GetBoolean(5)
                     );
             }
             return usuario;
@@ -102,14 +94,14 @@ namespace SysTINSClass
             while (dr.Read())
             {
                 lista.Add(new(
-                    dr.GetInt32(0),
-                    dr.GetString(1),
-                    dr.GetString(2),
-                    dr.GetString(3),
-                    Nivel.ObterPorId(dr.GetInt32(4)),
-                    dr.GetBoolean(5)
+                        dr.GetInt32(0),
+                        dr.GetString(1),
+                        dr.GetString(2),
+                        dr.GetString(3),
+                        Nivel.ObterPorId(dr.GetInt32(4)),
+                        dr.GetBoolean(5)
                     )
-                    );
+                );
             }
             return lista;
         }
@@ -123,26 +115,27 @@ namespace SysTINSClass
             cmd.Parameters.AddWithValue("spsenha", Senha);
             cmd.Parameters.AddWithValue("spnivel", Nivel.Id);
             return cmd.ExecuteNonQuery() > 0 ? true : false;
-    }
-        //efetuar login
-        public static Usuario Efetuarlogin(string email, string senha)
+        }
+        // efetuar login
+        public static Usuario EfetuarLogin(string email, string senha)
         {
-            Usuario usuario = new(); //new Usuario()
+            Usuario usuario = new();
             var cmd = Banco.Abrir();
-            cmd.CommandText = $"select * from usuarios where email = '{email}' and senha = md5('`{senha}') and ativo = 1";
+            cmd.CommandText = $"select * from usuarios where email = '{email}' and senha = md5('{senha}') and ativo = 1";
             var dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                usuario = new Usuario(dr.GetInt32(0),
-                    dr.GetString(1),
-                    dr.GetString(2),
-                    dr.GetString(3),
-                    Nivel.ObterPorId(dr.GetInt32(4)),
-                    dr.GetBoolean(5)
+                usuario = new(
+                        dr.GetInt32(0),
+                        dr.GetString(1),
+                        dr.GetString(2),
+                        dr.GetString(3),
+                        Nivel.ObterPorId(dr.GetInt32(4)),
+                        dr.GetBoolean(5)
                     );
             }
             return usuario;
         }
-        
-   }
+
+    }
 }
