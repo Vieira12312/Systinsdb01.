@@ -93,7 +93,7 @@ namespace SysTINSClass
 
         // ObterporId
 
-        public static Cliente ObterporId(int id)
+        public static Cliente ObterPorId(int id)
         {
             Cliente cliente = new();
             var cmd = Banco.Abrir();

@@ -43,6 +43,8 @@
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(254, 23);
             txtSenha.TabIndex = 20;
+            txtSenha.Text = "123456";
+            txtSenha.TextChanged += txtSenha_TextChanged;
             // 
             // txtEmail
             // 
@@ -50,6 +52,7 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(254, 23);
             txtEmail.TabIndex = 21;
+            txtEmail.Text = "murilo@gmail.com";
             // 
             // btnCancelar
             // 

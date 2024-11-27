@@ -84,7 +84,7 @@ namespace SysTINSClass
                 pedido = new Pedido(
                     dr.GetInt32(0),
                     Usuario.ObterPorId(dr.GetInt32(1)),
-                    Cliente.ObterporId(dr.GetInt32(2)),
+                    Cliente.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
                     dr.GetString(4),
                     dr.GetDouble(5),
@@ -104,7 +104,7 @@ namespace SysTINSClass
                 pedidos.Add(new(
                     dr.GetInt32(0),
                     Usuario.ObterPorId(dr.GetInt32(1)),
-                    Cliente.ObterporId(dr.GetInt32(2)),
+                    Cliente.ObterPorId(dr.GetInt32(2)),
                     dr.GetDateTime(3),
                     dr.GetString(4),
                     dr.GetDouble(5),

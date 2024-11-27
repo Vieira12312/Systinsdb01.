@@ -51,7 +51,6 @@ namespace SysTINSApp
 
         private void manterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
         }
 
         private void novoInserirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -59,6 +58,18 @@ namespace SysTINSApp
             FrmProdutos frmProdutos = new();// cria uma instância (objeto) do FrmUsuarios 
             frmProdutos.MdiParent = this; // associa esta instância ao container (MDI) FrmPrincipal
             frmProdutos.Show(); // exibe o form Usuários na janela do sistema 
+        }
+
+        private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void novoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            FrmPedidoNovo frmPedidoNovo= new();// cria uma instância (objeto) do FrmUsuarios 
+            frmPedidoNovo.MdiParent = this; // associa esta instância ao container (MDI) FrmPrincipal
+            frmPedidoNovo.Show(); // exibe o form Usuários na janela do sistema 
         }
     }
 }

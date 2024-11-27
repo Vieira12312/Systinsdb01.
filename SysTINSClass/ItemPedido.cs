@@ -11,12 +11,10 @@ namespace SysTINSClass
 {
     public class ItemPedido
     {
-       
 
         public int Id { get; set; }
-        public int PedidoId{ get; set; }
-        public Produto? Produto { get; }
-        public Produto? produto { get; set; }
+        public int PedidoId { get; set; }
+        public Produto? Produto { get; set; }
         public double ValorUnit { get; set; }
         public double Quantidade { get; set; }
         public double Desconto { get; set; }
@@ -24,16 +22,17 @@ namespace SysTINSClass
         {
             Produto = new();
         }
-        public ItemPedido( int pedidoId, Produto? produto, double quantidade, double desconto)
+
+        public ItemPedido(int pedidoId, Produto? produto, double quantidade, double desconto)
         {
             PedidoId = pedidoId;
             Produto = produto;
             Quantidade = quantidade;
             Desconto = desconto;
         }
-        public ItemPedido(int iD, int pedidoId, Produto? produto, double valorUnit, double quantidade, double desconto)
+        public ItemPedido(int id, int pedidoId, Produto? produto, double valorUnit, double quantidade, double desconto)
         {
-            Id = iD;
+            Id = id;
             PedidoId = pedidoId;
             Produto = produto;
             ValorUnit = valorUnit;
@@ -44,13 +43,14 @@ namespace SysTINSClass
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.CommandText = "sp_itempedido_inserir";
-            cmd.Parameters.AddWithValue("sppedido",PedidoId);
-            cmd.Parameters.AddWithValue("spproduto",Produto.Id);
-            cmd.Parameters.AddWithValue("spquantidade",Quantidade);
-            cmd.Parameters.AddWithValue("spdesconto",Desconto);
+            cmd.CommandText = "sp_itempedido_insert";
+            cmd.Parameters.AddWithValue("sppedido_id", PedidoId);
+            cmd.Parameters.AddWithValue("spproduto_id", Produto.Id);
+            cmd.Parameters.AddWithValue("spquantidade", Quantidade);
+            cmd.Parameters.AddWithValue("spdesconto", Desconto);
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
+
         }
         public static List<ItemPedido> ObterItensPorPedidoId(int id)
         {
@@ -69,26 +69,27 @@ namespace SysTINSClass
                     dr.GetDouble(5)
                     ));
             }
+
             return items;
         }
         public void Atualizar()
         {
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.CommandText = "sp_itempedido_inserir";
+            cmd.CommandText = "sp_itempedido_update";
             cmd.Parameters.AddWithValue("spid", Id);
             cmd.Parameters.AddWithValue("spquantidade", Quantidade);
             cmd.Parameters.AddWithValue("spdesconto", Desconto);
             cmd.ExecuteNonQuery();
-            cmd.Connection.Close();        
+            cmd.Connection.Close();
         }
         public void Remover()
         {
-
             var cmd = Banco.Abrir();
             cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.CommandText = "sp_itempedido_inserir";
-            cmd.Parameters.AddWithValue("sppedido", PedidoId);
+            cmd.CommandText = "sp_itempedido_delete";
+            cmd.Parameters.AddWithValue("spid", Id);
+            cmd.ExecuteNonQuery();
         }
     }
 }
