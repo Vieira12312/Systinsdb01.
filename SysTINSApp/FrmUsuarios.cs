@@ -1,6 +1,5 @@
-<<<<<<< HEAD
+//
 ﻿using SysTINSClass;
-=======
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,11 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SysTINSClass;
-<<<<<<< HEAD
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+
 
 namespace SysTINSApp
 {
@@ -27,8 +22,8 @@ namespace SysTINSApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             Usuario usuario = new(
                 txtNome.Text,
                 txtEmail.Text,
@@ -42,12 +37,12 @@ namespace SysTINSApp
                 MessageBox.Show($"Usuário {usuario.Id} inserido com sucesso");
                 btnInserir.Enabled = false;
             }
-=======
+//
 
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+// 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
 
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+// 7afd2f3889b316a0337ea6dbfa375599e1695451
 
         }
 
@@ -83,8 +78,8 @@ namespace SysTINSApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             Usuario usuario = new();
             usuario.Id = int.Parse(txtId.Text);
             usuario.Nome = txtNome.Text;
@@ -95,12 +90,12 @@ namespace SysTINSApp
                 CarregaGridUsuarios();
                 MessageBox.Show("Usuário atualizado com sucesso!");
             }
-=======
+//
 
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+// 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
 
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+// 7afd2f3889b316a0337ea6dbfa375599e1695451
         }
 
         private void cmbNivel_SelectedIndexChanged(object sender, EventArgs e)
@@ -110,26 +105,26 @@ namespace SysTINSApp
 
         private void FrmUsuarios_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             //carregandoi o combobox
-=======
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
+// 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
+// 7afd2f3889b316a0337ea6dbfa375599e1695451
             cmbNivel.DataSource = Nivel.ObterLista();//uma lista ou um objeto do tipo lista de niveis contendo todos os objetos do tipo lista
             cmbNivel.DisplayMember = "Nome";
             cmbNivel.ValueMember = "Id";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             //carregando o datagrid de usuarios
 
             //metodo estatico e da classe metodo nao etatico e o objeto
-=======
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
+// 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
+// 7afd2f3889b316a0337ea6dbfa375599e1695451
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -139,8 +134,8 @@ namespace SysTINSApp
 
         private void dgvUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             int linhaAtual = dgvUsuarios.CurrentRow.Index;
             int idUser = Convert.ToInt32(dgvUsuarios.Rows[linhaAtual].Cells[0].Value);
             var usuario = Usuario.ObterPorId(idUser);
@@ -173,10 +168,10 @@ namespace SysTINSApp
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
-=======
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
+// 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
+// 7afd2f3889b316a0337ea6dbfa375599e1695451
 
         }
     }

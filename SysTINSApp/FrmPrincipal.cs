@@ -39,19 +39,24 @@ namespace SysTINSApp
             Hide();
             FrmLogin frmLogin = new();
             //frmLogin.Show();
-            //if (frmLogin.ShowDialog() == DialogResult.OK)
-            //{
-            //    tsslUsuario.Text = Program.UsuarioLogado.Nome + " - " + Program.UsuarioLogado.Nivel.Nome;
-            Show();
-            //}
-            //else
-            //    Application.Exit();
+            if (frmLogin.ShowDialog() == DialogResult.OK)
+            {
+                tsslUsuario.Text = Program.UsuarioLogado.Nome + " - " + Program.UsuarioLogado.Nivel.Nome;
+                Show();
+            }
+            else
+                Application.Exit();
 
         }
 
         private void manterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmProdutos frmProdutos= new();// cria uma instância (objeto) do FrmUsuarios 
+            
+        }
+
+        private void novoInserirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProdutos frmProdutos = new();// cria uma instância (objeto) do FrmUsuarios 
             frmProdutos.MdiParent = this; // associa esta instância ao container (MDI) FrmPrincipal
             frmProdutos.Show(); // exibe o form Usuários na janela do sistema 
         }

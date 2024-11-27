@@ -55,15 +55,15 @@
             // 
             // btnInserir
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             btnInserir.Location = new Point(21, 233);
-=======
+//
             btnInserir.Location = new Point(383, 204);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             btnInserir.Location = new Point(383, 204);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             btnInserir.Name = "btnInserir";
             btnInserir.Size = new Size(75, 23);
             btnInserir.TabIndex = 0;
@@ -73,15 +73,15 @@
             // 
             // btnConsultar
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             btnConsultar.Location = new Point(102, 233);
-=======
+//
             btnConsultar.Location = new Point(450, 204);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             btnConsultar.Location = new Point(450, 204);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             btnConsultar.Name = "btnConsultar";
             btnConsultar.Size = new Size(75, 23);
             btnConsultar.TabIndex = 1;
@@ -91,16 +91,16 @@
             // 
             // btnAtualizar
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             btnAtualizar.Enabled = false;
             btnAtualizar.Location = new Point(183, 233);
-=======
+//
             btnAtualizar.Location = new Point(531, 204);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             btnAtualizar.Location = new Point(531, 204);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             btnAtualizar.Name = "btnAtualizar";
             btnAtualizar.Size = new Size(75, 23);
             btnAtualizar.TabIndex = 2;
@@ -116,15 +116,15 @@
             dgvUsuarios.AllowUserToResizeRows = false;
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUsuarios.Columns.AddRange(new DataGridViewColumn[] { clnId, clnNome, clnEmail, clnNivel, clnAtivo });
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             dgvUsuarios.Location = new Point(21, 262);
-=======
+//
             dgvUsuarios.Location = new Point(21, 288);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             dgvUsuarios.Location = new Point(21, 288);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             dgvUsuarios.Name = "dgvUsuarios";
             dgvUsuarios.RowHeadersVisible = false;
             dgvUsuarios.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -175,15 +175,15 @@
             // label1
             // 
             label1.AutoSize = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             label1.Location = new Point(21, 102);
-=======
+//
             label1.Location = new Point(188, 150);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             label1.Location = new Point(188, 150);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             label1.Name = "label1";
             label1.Size = new Size(18, 15);
             label1.TabIndex = 4;
@@ -193,15 +193,15 @@
             // label2
             // 
             label2.AutoSize = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             label2.Location = new Point(123, 102);
-=======
+//
             label2.Location = new Point(24, 150);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             label2.Location = new Point(24, 150);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             label2.Name = "label2";
             label2.Size = new Size(40, 15);
             label2.TabIndex = 5;
@@ -210,15 +210,15 @@
             // label3
             // 
             label3.AutoSize = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             label3.Location = new Point(21, 146);
-=======
+//
             label3.Location = new Point(24, 197);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             label3.Location = new Point(24, 197);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             label3.Name = "label3";
             label3.Size = new Size(36, 15);
             label3.TabIndex = 6;
@@ -227,15 +227,15 @@
             // label4
             // 
             label4.AutoSize = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             label4.Location = new Point(21, 190);
-=======
+//
             label4.Location = new Point(21, 241);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             label4.Location = new Point(21, 241);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             label4.Name = "label4";
             label4.Size = new Size(39, 15);
             label4.TabIndex = 7;
@@ -247,15 +247,15 @@
             chkAtivo.Checked = true;
             chkAtivo.CheckState = CheckState.Checked;
             chkAtivo.Enabled = false;
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             chkAtivo.Location = new Point(264, 236);
-=======
+//
             chkAtivo.Location = new Point(188, 124);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             chkAtivo.Location = new Point(188, 124);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             chkAtivo.Name = "chkAtivo";
             chkAtivo.Size = new Size(54, 19);
             chkAtivo.TabIndex = 9;
@@ -266,15 +266,15 @@
             // label5
             // 
             label5.AutoSize = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             label5.Location = new Point(383, 102);
-=======
+//
             label5.Location = new Point(21, 106);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             label5.Location = new Point(21, 106);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             label5.Name = "label5";
             label5.Size = new Size(34, 15);
             label5.TabIndex = 10;
@@ -283,15 +283,15 @@
             // label6
             // 
             label6.AutoSize = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             label6.Location = new Point(202, 190);
-=======
+//
             label6.Location = new Point(202, 241);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             label6.Location = new Point(202, 241);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             label6.Name = "label6";
             label6.Size = new Size(96, 15);
             label6.TabIndex = 15;
@@ -300,30 +300,30 @@
             // 
             // txtId
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             txtId.Location = new Point(21, 120);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
             txtId.Size = new Size(84, 23);
-=======
-=======
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
+//
+//
             txtId.Location = new Point(188, 171);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
             txtId.Size = new Size(189, 23);
-<<<<<<< HEAD
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
+//
+//
+//
             txtId.TabIndex = 16;
             txtId.TextChanged += textBox1_TextChanged;
             // 
             // txtNome
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             txtNome.Location = new Point(123, 120);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(254, 23);
@@ -333,9 +333,9 @@
             // txtEmail
             // 
             txtEmail.Location = new Point(21, 164);
-=======
-=======
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
+//
+//
             txtNome.Location = new Point(21, 171);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(150, 23);
@@ -344,44 +344,44 @@
             // txtEmail
             // 
             txtEmail.Location = new Point(21, 215);
-<<<<<<< HEAD
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
+//
+//
+//
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(356, 23);
             txtEmail.TabIndex = 20;
             // 
             // txtConfSenha
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             txtConfSenha.Location = new Point(202, 204);
-=======
+//
             txtConfSenha.Location = new Point(202, 259);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             txtConfSenha.Location = new Point(202, 259);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             txtConfSenha.Name = "txtConfSenha";
             txtConfSenha.Size = new Size(175, 23);
             txtConfSenha.TabIndex = 21;
             // 
             // cmbNivel
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             cmbNivel.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbNivel.FormattingEnabled = true;
             cmbNivel.Location = new Point(383, 120);
-=======
+//
             cmbNivel.FormattingEnabled = true;
             cmbNivel.Location = new Point(21, 124);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             cmbNivel.FormattingEnabled = true;
             cmbNivel.Location = new Point(21, 124);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             cmbNivel.Name = "cmbNivel";
             cmbNivel.Size = new Size(150, 23);
             cmbNivel.TabIndex = 22;
@@ -389,15 +389,15 @@
             // 
             // txtSenha
             // 
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             txtSenha.Location = new Point(21, 204);
-=======
+//
             txtSenha.Location = new Point(21, 259);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             txtSenha.Location = new Point(21, 259);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             txtSenha.Name = "txtSenha";
             txtSenha.Size = new Size(175, 23);
             txtSenha.TabIndex = 23;
@@ -407,15 +407,15 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-<<<<<<< HEAD
-<<<<<<< HEAD
+//
+//
             ClientSize = new Size(800, 825);
-=======
+//
             ClientSize = new Size(800, 450);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
-=======
+//
+//
             ClientSize = new Size(800, 450);
->>>>>>> 7afd2f3889b316a0337ea6dbfa375599e1695451
+//
             Controls.Add(txtSenha);
             Controls.Add(cmbNivel);
             Controls.Add(txtConfSenha);

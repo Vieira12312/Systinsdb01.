@@ -34,7 +34,7 @@ namespace SysTINSApp
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             //colocaremos a validação do login
-            var usuario = Usuario.Efetuarlogin(txtEmail.Text, txtSenha.Text);
+            var usuario = Usuario.EfetuarLogin(txtEmail.Text, txtSenha.Text);
             if (usuario.Id > 0)
             {
                 //caso o login tenha obtido sucesso
